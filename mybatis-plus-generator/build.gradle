@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.baomidou:mybatis-plus-generator:3.4.0'
+    implementation 'org.apache.velocity:velocity-engine-core:2.2'
+    implementation 'mysql:mysql-connector-java:5.1.49'
+}

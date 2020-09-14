@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+
+group 'sitec.cc'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation "cglib:cglib:3.3.0"
+    implementation "org.objenesis:objenesis:3.1"
+}

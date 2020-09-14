@@ -1,0 +1,5 @@
+rootProject.name = 'example'
+include 'example-service-api','example-service'
+include 'example-common'
+include 'example-web'
+

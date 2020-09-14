@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: example-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/demo?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: sitec.cc
+    driver-class-name: com.mysql.jdbc.Driver
+server:
+  port: 8081
+
+logging:
+  level:
+    root: info
+
+dubbo:
+  scan:
+    base-packages: cc.sitec.example.service
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: zookeeper://127.0.0.1:2181
+

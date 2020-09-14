@@ -1,0 +1,29 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.3.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation project(':example-service-api')
+    implementation project(':example-common')
+
+    implementation 'mysql:mysql-connector-java:5.1.49'
+    implementation 'com.baomidou:mybatis-plus-boot-starter:3.4.0'
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.apache.dubbo:dubbo-spring-boot-starter:2.7.7'
+    implementation 'org.apache.curator:curator-framework:4.2.0'
+    implementation 'org.apache.curator:curator-recipes:4.2.0'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed","skipped","failed"
+    }
+}
